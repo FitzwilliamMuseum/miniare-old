@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MINIARE > {{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}"/>
+    <meta name="keywords" content="{{ page.keywords}}"/>
+
+    {% include_relative _includes/head.html %}
+
+
+</head>
+
+<body style="background-color: black;">
+<div id="Page">
+
+    <div id="DivLeft">
+        {% include_relative _includes/sideBar.html %}
+    </div>
+
+    <div id="DivRight" style="height: 500px;">
+
+        {% include_relative _includes/header.html %}
+
+        {{ content }}
+
+
+    </div>
+
+    <div id="DivBottom">
+        <!-- Clears the float attributes defined for the above elements. -->
+        {% include_relative _includes/tracking.html %}
+    </div>
+
+</div>
+</body>
+</html>
